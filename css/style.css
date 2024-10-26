@@ -1,0 +1,423 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+.container {
+  width: calc(400px - var(--pd) - var(--pd));
+  max-width: calc(400px - var(--pd) - var(--pd));
+  min-width: calc(250px - var(--pd) - var(--pd));
+  height: calc(800px - var(--pd) - var(--pd));
+  max-height: calc(700px - var(--pd) - var(--pd));
+  min-height: calc(700px - var(--pd) - var(--pd));
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: var(--bg-color-1);
+
+  padding: var(--pd);
+
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+#main .title-cont {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+#main .title-cont .cont {
+  padding: 40px 0 30px 0;
+}
+#main .title-cont .cont .sub-title {
+  font-size: 17px;
+  color: var(--font-color-1);
+  font-family: "CookieRunRegular";
+}
+#main .title-cont .cont .title {
+  font-size: 30px;
+  color: var(--font-color-1);
+  font-family: "CookieRun";
+  margin-top: 8px;
+}
+#main .title-cont .hr {
+  width: 90%;
+  height: 2px;
+  background-color: var(--line-color-4);
+  position: relative;
+}
+#main .title-cont .hr::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--line-color-4);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#main .title-cont .hr::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--line-color-4);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#main .sub-cont {
+  text-align: center;
+
+  font-size: 17px;
+  color: var(--font-color-1);
+  font-family: "CookieRunRegular";
+
+  margin-top: 70px;
+}
+#main .sub-cont {
+  text-align: center;
+}
+#main .start-btn {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+#main .start-btn .btn {
+  width: 190px;
+  padding: 18px;
+  border-radius: 100px;
+
+  font-size: 23px;
+  text-align: center;
+  color: var(--font-color-1);
+  font-family: "CookieRunBold";
+  background-color: var(--bg-color-3);
+  border: 2px solid var(--line-color-1);
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  position: relative;
+  overflow: hidden;
+}
+#main .start-btn .btn:hover {
+  background-color: var(--bg-color-5);
+  color: var(--font-color-2);
+}
+#main .bg-cont img.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#main .bg-cont img.obj {
+  width: 80%;
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main .bg-cont .bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: linear-gradient(
+    2.51deg,
+    rgba(187, 223, 237, 0.46) 8.58%,
+    rgba(94, 130, 144, 0.73) 41.34%,
+    rgba(47, 83, 97, 0.865) 62.28%,
+    #002533 98.09%
+  );
+}
+#main .bg-cont .cont .box {
+  width: 100px;
+  height: 100px;
+  background-color: #f4fbfe;
+  border: 1px solid #b8d6e1;
+
+  position: absolute;
+
+  opacity: 0.2;
+}
+#main .bg-cont .cont .box:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  bottom: 120px;
+  left: 70px;
+}
+#main .bg-cont .cont .box:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  bottom: 200px;
+  left: 110px;
+}
+#main .bg-cont .cont .box:nth-child(4) {
+  width: 60px;
+  height: 60px;
+  bottom: 120px;
+  left: 70px;
+}
+
+#query .container {
+  background: linear-gradient(180deg, #376070 0%, #dbeff6 100%);
+}
+#query .guide-cont {
+  display: none;
+}
+#query .guide-cont.active {
+  display: block;
+}
+#query .guide-cont .cont {
+  width: 80%;
+  background-color: var(--bg-color-4);
+  color: white;
+
+  text-align: center;
+  padding: 60px 0;
+  border: 3px solid var(--line-color-2);
+
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+
+  font-family: "CookieRunRegular";
+  line-height: 22px;
+
+  filter: drop-shadow(0px 3px 10px rgba(32, 79, 97, 1));
+}
+#query .guide-cont .cont > div:last-child {
+  margin-top: 30px;
+}
+#query .guide-cont .cont span {
+  color: var(--font-color-3);
+}
+#query .guide-cont .next-btn {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#query .guide-cont .next-btn .arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid transparent;
+  border-top: 25px solid transparent;
+  border-left: 30px solid var(--bg-color-3);
+  border-right: 30px solid transparent;
+
+  transform: rotate(90deg);
+
+  filter: drop-shadow(0px 3px 10px rgba(32, 79, 97, 0.3));
+}
+#query .guide-cont .next-btn .text {
+  font-family: "CookieRunRegular";
+  margin-top: -10px;
+  color: var(--bg-color-3);
+
+  filter: drop-shadow(0px 3px 10px rgba(32, 79, 97, 0.3));
+}
+#query .query-cont {
+  display: none;
+}
+#query .query-cont.active {
+  display: block;
+}
+#query .query-cont .question {
+  font-size: 25px;
+  color: var(--font-color-2);
+  font-family: "CookieRunBold";
+  margin-top: 130px;
+  text-align: center;
+  line-height: 30px;
+}
+#query .query-cont .choice {
+  margin-top: 60px;
+}
+#query .query-cont .choice .cont {
+  font-size: 18px;
+  color: var(--font-color-1);
+  font-family: "CookieRunRegular";
+  text-align: center;
+  line-height: 20px;
+
+  border-radius: 30px;
+
+  padding: 20px;
+  background-color: var(--bg-color-1);
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+#query .heart .svg-cont {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+#query .beat-loader {
+  stroke: var(--bg-color-1);
+}
+#query .beat-loader.active {
+  stroke: var(--line-color-3);
+}
+
+#result .container {
+  position: relative;
+}
+#result .border {
+  border: 10px solid var(--line-color-4);
+  width: calc(100% - 20px - var(--pd) * 2);
+  height: calc(100% - 20px - var(--pd) * 2);
+
+  border-radius: 20px;
+
+  position: absolute;
+  left: var(--pd);
+  top: var(--pd);
+}
+#result .content {
+  border-radius: 15px;
+
+  padding: 20px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  overflow: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+#result .content::-webkit-scrollbar {
+  display: none;
+}
+#result .title-cont {
+  margin-top: 40px;
+}
+#result .title-cont .sub-title {
+  font-size: 18px;
+  color: var(--font-color-1);
+  font-family: "CookieRunRegular";
+  text-align: center;
+}
+#result .title-cont .title {
+  font-size: 35px;
+  color: var(--font-color-1);
+  font-family: "CookieRun";
+  text-align: center;
+  line-height: 40px;
+
+  margin-top: 10px;
+}
+#result .img-cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#result .img-cont .hero-img {
+  width: 100%;
+  background-color: white;
+  border-radius: 40px;
+}
+#result .detail-cont {
+  margin-top: 50px;
+  background-color: var(--bg-color-2);
+  color: var(--font-color-2);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+#result .detail-cont.explanation {
+  margin-top: 20px;
+}
+#result .detail-cont .title {
+  font-size: 22px;
+  color: var(--font-color-1);
+  font-family: "CookieRunBold";
+
+  color: var(--font-color-2);
+}
+#result .detail-cont ul {
+  font-size: 15px;
+  color: var(--font-color-1);
+  font-family: "CookieRunRegular";
+  line-height: 20px;
+
+  color: var(--font-color-2);
+
+  word-break: keep-all;
+
+  margin-top: 20px;
+}
+#result .detail-cont ul li {
+  margin-top: 5px;
+  position: relative;
+  margin-left: 20px;
+}
+#result .detail-cont ul li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: var(--font-color-2);
+  position: absolute;
+  top: 8px;
+  left: -15px;
+}
+#result .return-cont {
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#result .return-cont .title {
+  font-size: 25px;
+  color: var(--font-color-1);
+  font-family: "CookieRunBold";
+  line-height: 20px;
+  text-align: center;
+}
+#result .return-cont .btn {
+  background-color: #4a4a4a;
+  width: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#result .return-cont .btn img {
+  width: 100%;
+}
